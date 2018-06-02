@@ -1,2 +1,2 @@
-# macako.github.io
-my personal github web site
+# web
+Repositorio de código con ejemplo de página web sencilla pero eficaz.
