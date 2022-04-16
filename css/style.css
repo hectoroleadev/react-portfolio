@@ -1,125 +1,670 @@
-/* Space out content a bit */
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+main,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  -webkit-scrollbar-width: none !important;
+  -moz-scrollbar-width: none !important;
+  -ms-scrollbar-width: none !important;
+  scrollbar-width: none !important;
+  box-sizing: border-box;
+  font-size: 59%;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-/* Custom page header */
-.header {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e5e5e5;
-}
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-/* Customize container */
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-}
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-.jumbotron .btn {
-  padding: 14px 24px;
-  font-size: 21px;
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-}
-
-.bib tr td:first-child {
-  display: none
-}
-
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.navbar {
-  margin-bottom: 20px;
-}
-
-.header-bar {
-  display: block;
-  padding: 5px 10px;
-  color: #fff;
-  text-align: left;
-  background-color: #848482;
-}
-
-.header-bar .address {
-  color: #B6B6B4;
-}
-
-.float-right {
-  float: right;
-  margin: 10px 10px 10px 10px
-}
-
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
+  font-synthesis: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;  
+  font-weight: 400;
+  font-display: swap;
 }
 
-@media (min-width: 768px) {
-  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
-    float: left;
+button {
+  cursor: pointer;
+  padding: 0;
+  background-color: inherit;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.photo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  padding-bottom: 2.6rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .photo {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 2.6rem;
   }
-  .col-sm-2 {
-    width: 16.66666667%;
+}
+
+.contactme {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.social-link {
+  width: 4.6rem;
+  height: 4.6rem;
+  border: 1px solid;
+  margin: 0.66rem;
+  background-color: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.social-link svg {
+  height: 2rem;
+  fill: #fff;
+}
+
+.social-link:hover {
+  opacity: 0.6;
+}
+ 
+.main4 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .main4 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.main4 img {
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+  max-width: 16.2rem;
+  min-width: 0;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .main4 img {
+    max-width: 18rem;
+  }
+}
+
+.main4 > :first-child {
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+}
+
+.main4 > :last-child {
+  margin-bottom: 0 !important;
+  margin-right: 0 !important;
+}
+
+.role-description {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.contact-section {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.contact-section > :first-child {
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+}
+
+.contact-section > :last-child {
+  margin-bottom: 0 !important;
+  margin-right: 0 !important;
+}
+
+.download {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.gEKEiq {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.6rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 1.1rem 1.6rem 1rem 1.6rem;
+  background-color: #fff;
+  color: #212121;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (min-width: 1024px) {
+  .gEKEiq {
+    font-size: 2rem;
+  }
+}
+
+.gEKEiq:hover {
+  box-shadow: 1rem 1rem 3.15rem 0 rgba(0, 0, 0, 0.25);
+}
+
+.jqMGwH {
+  padding: 0 0.6rem 0 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.jqMGwH svg {
+  height: 1.8rem;
+  margin: 0;
+  padding: 0;
+  fill: #212121;
+}
+
+@media screen and (min-width: 1024px) {
+  .jqMGwH svg {
+    height: 2rem;
+  }
+}
+
+.profile {
+  width: 100%;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.75);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.profile strong {
+  font-weight: 700;
+}
+
+.profile em {
+  font-style: italic;
+}
+
+.profile br {
+  line-height: 0.6;
+}
+
+.kGAncz {
+  width: 100%;
+  white-space: pre-wrap;
+  margin-bottom: 3rem;
+  text-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+  .kGAncz {
+    max-width: 40vw;
+  }
+}
+
+.kGAncz strong {
+  font-weight: 700;
+}
+
+.kGAncz em {
+  font-style: italic;
+}
+
+.kGAncz br {
+  line-height: 0.6;
+}
+
+.kGAncz a {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: inherit;
+}
+
+.main2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 95%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-shadow: none;
+  border-radius: 0.8rem;
+  -webkit-animation: none;
+  animation: none;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+@media screen and (min-width: 1024px) {
+  .main2 {
+    width: auto;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.main3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 0.8rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: 0 0;
+  padding: 3.5999999999999996rem;
+  padding: 1.0499999999999998rem;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main3 {
+    width: 100%;
+    border-radius: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main3 {
+    padding: 6rem;
+  }
+}
+
+.main3 > :first-child {
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+}
+
+.main3 > :last-child {
+  margin-bottom: 0 !important;
+  margin-right: 0 !important;
+}
+
+data-styled.g33[id=] {
+  content: "main3,";
+}
+
+.hVHLDR > :first-child {
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+}
+
+.hVHLDR > :last-child {
+  margin-bottom: 0 !important;
+  margin-right: 0 !important;
+}
+
+.main {
+  padding: 5% 2.5%;
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #000;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: auto;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Source Code Pro, -apple-system, system-ui, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  word-break: normal;
+  word-wrap: normal;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  font-kerning: normal;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  font-kerning: normal;
+}
+
+@media screen and (min-width: 1024px) {
+  .main {
+    padding: 2.5%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+.main * {
+  line-height: 2.7rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .main * {
+    line-height: 3rem;
+  }
+}
+
+.main p {
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .main p {
+    font-size: 2rem;
+    line-height: 3rem;
+    max-width: 60rem;
+  }
+}
+
+.main li {
+  font-size: 1.8rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .main li {
+    font-size: 2rem;
+    max-width: 40vw;
+  }
+}
+
+.main h1,
+.main h2 {
+  text-rendering: optimizeLegibility;
+  font-family: inherit;
+}
+
+@media screen and (min-width: 1024px) {
+  .main h1,
+  .main h2 {
+    max-width: 40vw;
+  }
+}
+
+.main h1 {
+  font-size: 4.05rem;
+  margin-bottom: 1.5rem;
+  line-height: 4.455rem;
+  font-weight: 700;
+  -webkit-letter-spacing: -0.04rem;
+  -moz-letter-spacing: -0.04rem;
+  -ms-letter-spacing: -0.04rem;
+  letter-spacing: -0.04rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .main h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1.875rem;
+    line-height: 4.5rem;
+  }
+}
+
+.main h2 {
+  font-size: 2.7rem;
+  margin-bottom: 1.5rem;
+  line-height: 3.105rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .main h2 {
+    font-size: 3rem;
+    margin-bottom: 1.875rem;
+    line-height: 3.4499999999999997rem;
   }
 }
