@@ -8,5 +8,9 @@ body {
 }
 
 .cover-container {
+  max-width: 40rem;
+}
+
+.cover-container-landscape {
   max-width: 56rem;
 }
