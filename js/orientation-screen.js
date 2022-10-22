@@ -1,24 +1,31 @@
 const MIN_LANDSCAPE = 600;
+const CONTACT_SECTION_ID = "contact-section";
+const RESUME_SECTION_ID = "resume-section";
+const COL_STYLE = "col";
+const CONTAINER_ID = "container";
+const COVER_CONTAINER_STYLE = "cover-container";
+const COVER_CONTAINER_LANDSCAPE_STYLE = "cover-container-landscape";
 
 const getClassListById = (id) => document.getElementById(id).classList;
 const addClassById = (id, className) => getClassListById(id).add(className);
 const removeClassById = (id, className) =>
   getClassListById(id).remove(className);
 
+
 const changeOrientationColumnsClass = () => {
   let isLandscape = window.matchMedia("(orientation: landscape)");
   let screenHeight = window.screen.height;
 
   if (isLandscape.matches && screenHeight < MIN_LANDSCAPE) {
-    removeClassById("container", "cover-container");
-    addClassById("container", "cover-container-landscape");
-    addClassById("section-one", "col");
-    addClassById("section-two", "col");
+    removeClassById(CONTAINER_ID, COVER_CONTAINER_STYLE);
+    addClassById(CONTAINER_ID, COVER_CONTAINER_LANDSCAPE_STYLE);    
+    addClassById(CONTACT_SECTION_ID, COL_STYLE);
+    addClassById(RESUME_SECTION_ID, COL_STYLE);
   } else {
-    removeClassById("section-one", "col");
-    removeClassById("section-two", "col");
-    removeClassById("container", "cover-container-landscape");
-    addClassById("container", "cover-container");
+    removeClassById(CONTACT_SECTION_ID, COL_STYLE);    
+    removeClassById(RESUME_SECTION_ID, COL_STYLE);
+    removeClassById(CONTAINER_ID, COVER_CONTAINER_LANDSCAPE_STYLE);
+    addClassById(CONTAINER_ID, COVER_CONTAINER_STYLE);
   }
 };
 
