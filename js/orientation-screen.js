@@ -1,8 +1,8 @@
 const MIN_LANDSCAPE = 600;
 const CONTACT_SECTION_ID = "contact-section";
 const RESUME_SECTION_ID = "resume-section";
-const COL_STYLE = "col";
 const CONTAINER_ID = "container";
+const COL_STYLE = "col";
 const COVER_CONTAINER_STYLE = "cover-container";
 const COVER_CONTAINER_LANDSCAPE_STYLE = "cover-container-landscape";
 
