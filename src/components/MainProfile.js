@@ -29,7 +29,7 @@ const MainProfile = () => {
     <main>
       <article>
         <Row
-          className='align-items-center mx-auto h-50'
+          className='align-items-center mx-auto'
           style={{ height: landscape ? '65vh' : '85vh' }}
         >
           <Col>
