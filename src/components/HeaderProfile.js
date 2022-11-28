@@ -20,7 +20,7 @@ const HeaderProfile = () => {
   }, [darkTheme]);
 
   return (
-    <header className='text-end'>
+    <header className='text-end fixed-top p-3'>
       <Button
         variant={darkTheme ? 'outline-light' : 'outline-dark'}
         onClick={() => changeTheme()}
