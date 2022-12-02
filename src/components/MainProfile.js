@@ -30,7 +30,7 @@ const MainProfile = () => {
       <article>
         <Row
           className='align-items-center mx-auto'
-          style={{ height: landscape ? '65vh' : '85vh' }}
+          style={{ height: landscape ? '70vh' : '90vh' }}
         >
           <Col>
             <ContactSection />
