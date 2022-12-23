@@ -9,7 +9,7 @@ const ContactSection = ({
     <section>
       <Image
         className='rounded-5 mb-4'
-        src='https://storage.googleapis.com/buckets.hectorolea.dev/hector-olea.jpg'
+        src='images/hector-olea.jpg'
         width='150'
         height='150'
         alt={fullName}
