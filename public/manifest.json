@@ -1,11 +1,16 @@
 {
-  "short_name": "Hector Olea Profile",
-  "name": "Created by React",
+  "short_name": "Hector Olea Web Site",
+  "name": "Hector Olea Web Site Created by React JS",
   "icons": [
     {
       "src": "logo192.png",
       "type": "image/png",
       "sizes": "192x192"
+    },
+    {
+      "src": "logo96.png",
+      "type": "image/png",
+      "sizes": "96x96"
     }
   ],
   "start_url": ".",

@@ -11,7 +11,7 @@ const DownloadSection = () => {
     <section>
       <Button
         variant={darkTheme ? 'outline-light' : 'outline-dark'}
-        href='https://storage.googleapis.com/buckets.hectorolea.dev/hector-olea-resume.pdf'
+        href='pdfs/hector-olea-resume.pdf'
         target='_blank'
         rel='noreferrer'
       >
