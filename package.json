@@ -1,7 +1,7 @@
 {
   "name": "hectorolea",
   "homepage": "http://macako.github.io",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
