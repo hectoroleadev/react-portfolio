@@ -1,13 +1,13 @@
-import React from 'react';
 import { useContext } from 'react';
-import { AppContext } from '../contexts/AppState';
+import { AppContext } from '../../contexts/AppState';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Button from 'react-bootstrap/Button';
 
-const LinksSection = () => {
+export const LinksSection = () => {
   const { darkTheme } = useContext(AppContext);
+  
   const links = [
     {
       icon: faLinkedinIn,
@@ -34,5 +34,3 @@ const LinksSection = () => {
     </section>
   );
 };
-
-export default LinksSection;

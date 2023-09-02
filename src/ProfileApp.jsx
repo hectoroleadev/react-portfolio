@@ -1,13 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import HeaderProfile from './components/HeaderProfile';
-import MainProfile from './components/MainProfile';
-import FooterProfile from './components/FooterProfile';
+import { HeaderProfile, MainProfile, FooterProfile } from './components';
 import Container from 'react-bootstrap/Container';
 import { AppContext, AppProvider } from './contexts/AppState';
 import './App.css';
 import './App.dark.css';
 
-const App = () => {
+const PortFolioApp = () => {
   return (
     <AppProvider>
       <AppContext.Consumer>
@@ -27,4 +25,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default PortFolioApp;

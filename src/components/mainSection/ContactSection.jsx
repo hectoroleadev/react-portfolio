@@ -1,10 +1,7 @@
-import React from 'react';
 import Image from 'react-bootstrap/Image';
+import PropTypes from 'prop-types';
 
-const ContactSection = ({
-  fullName = 'Hector Olea',
-  role = 'Full stack developer',
-}) => {
+export const ContactSection = ({ fullName, role }) => {
   return (
     <section>
       <Image
@@ -20,4 +17,12 @@ const ContactSection = ({
   );
 };
 
-export default ContactSection;
+ContactSection.propTypes = {
+  fullName: PropTypes.string,
+  role: PropTypes.string,
+};
+
+ContactSection.defaultProps = {
+  fullName: 'Hector Olea',
+  role: 'Full Stack Developer',
+};
