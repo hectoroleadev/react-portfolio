@@ -1,12 +1,12 @@
-import React from 'react';
 import { useContext } from 'react';
-import { AppContext } from '../contexts/AppState';
+import { AppContext } from '../../contexts/AppState';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import Button from 'react-bootstrap/Button';
 
-const DownloadSection = () => {
+export const DownloadSection = () => {
   const { darkTheme } = useContext(AppContext);
+
   return (
     <section>
       <Button
@@ -21,5 +21,3 @@ const DownloadSection = () => {
     </section>
   );
 };
-
-export default DownloadSection;

@@ -1,6 +1,4 @@
-import React from 'react';
-
-const HeaderProfile = () => {
+export const AboutSection = () => {
   return (
     <section>
       <p className='h4 text-opacity-75 my-4'>
@@ -10,5 +8,3 @@ const HeaderProfile = () => {
     </section>
   );
 };
-
-export default HeaderProfile;
