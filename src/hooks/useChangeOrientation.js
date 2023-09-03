@@ -1,17 +1,16 @@
 import { useEffect, useState, useContext } from 'react';
 import { AppContext } from '../contexts/AppState';
 
+const MIN_LANDSCAPE = 600;
+
 export const useChangeOrientation = () => {
   const { landscape, setLandscape } = useContext(AppContext);
 
   const changeOrientationColumns = () => {
-    const MIN_LANDSCAPE = 600;
     const isLandscape = window.matchMedia('(orientation: landscape)');
     const screenHeight = window.screen.height;
 
-    isLandscape.matches && screenHeight < MIN_LANDSCAPE
-      ? setLandscape(true)
-      : setLandscape(false);
+    setLandscape(isLandscape.matches && screenHeight < MIN_LANDSCAPE);
   };
 
   useEffect(() => {

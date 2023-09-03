@@ -1,22 +1,22 @@
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useContext } from 'react';
 import { AppContext } from '../contexts/AppState';
 
+const DARK_CLASS = document.body.classList;
+
 export const useChangeTheme = () => {
-  const { darkTheme, setDarkTheme } = useContext(AppContext);
+  const { isDarkTheme, setDarkTheme } = useContext(AppContext);
 
   const changeTheme = () => {
-    document.body.classList.remove('dark');
-    setDarkTheme(!darkTheme);
+    DARK_CLASS.remove('dark');
+    setDarkTheme(!isDarkTheme);
   };
 
   useEffect(() => {
-    if (darkTheme) {
-      document.body.classList.add('dark');
-    }
-  }, [darkTheme]);
+    if (isDarkTheme) DARK_CLASS.add('dark');
+  }, [isDarkTheme]);
 
   return {
-    darkTheme,
+    isDarkTheme,
     changeTheme,
   };
 };
