@@ -4,15 +4,15 @@ import Button from 'react-bootstrap/Button';
 import { useChangeTheme } from '../hooks/useChangeTheme';
 
 export const HeaderProfile = () => {
-  const { darkTheme, changeTheme } = useChangeTheme();
+  const { isDarkTheme, changeTheme } = useChangeTheme();
 
   return (
     <header className='text-end fixed-top p-3'>
       <Button
-        variant={darkTheme ? 'outline-light' : 'outline-dark'}
+        variant={isDarkTheme ? 'outline-light' : 'outline-dark'}
         onClick={changeTheme}
       >
-        <FontAwesomeIcon icon={darkTheme ? faSun : faMoon} size='lg' />
+        <FontAwesomeIcon icon={isDarkTheme ? faSun : faMoon} size='lg' />
       </Button>
     </header>
   );

@@ -5,7 +5,7 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import Button from 'react-bootstrap/Button';
 
 export const DownloadSection = () => {
-  const { darkTheme } = useContext(AppContext);
+  const { isDarkTheme: darkTheme } = useContext(AppContext);
 
   return (
     <section>

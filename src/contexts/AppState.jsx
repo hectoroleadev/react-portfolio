@@ -11,7 +11,7 @@ const appReducer = (state, action) => {
     case 'SET_DARK_THEME': {
       return {
         ...state,
-        darkTheme: action.payload,
+        isDarkTheme: action.payload,
       };
     }
     default: {
@@ -22,7 +22,7 @@ const appReducer = (state, action) => {
 
 const initialState = {
   landscape: false,
-  darkTheme: true,
+  isDarkTheme: true,
 };
 
 export const AppContext = createContext(initialState);
@@ -48,7 +48,7 @@ export const AppProvider = ({ children }) => {
     <AppContext.Provider
       value={{
         landscape: state.isLandscape,
-        darkTheme: state.darkTheme,
+        isDarkTheme: state.isDarkTheme,
         setLandscape,
         setDarkTheme,
       }}

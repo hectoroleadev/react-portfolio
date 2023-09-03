@@ -1,28 +1,19 @@
 import { useContext } from 'react';
 import { AppContext } from '../../contexts/AppState';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Button from 'react-bootstrap/Button';
+import { getLinksSection } from '../../helpers/getLinksSection';
 
 export const LinksSection = () => {
-  const { darkTheme } = useContext(AppContext);
-  
-  const links = [
-    {
-      icon: faLinkedinIn,
-      href: 'https://www.linkedin.com/in/hectorolea',
-    },
-    { icon: faGithub, href: 'https://github.com/macako' },
-    { icon: faEnvelope, href: 'mailto:hey@hectorolea.dev' },
-  ];
+  const { isDarkTheme } = useContext(AppContext);
+  const links = getLinksSection();
 
   return (
     <section>
       {links.map((link, idx) => (
         <span key={idx}>
           <Button
-            variant={darkTheme ? 'outline-light' : 'outline-dark'}
+            variant={isDarkTheme ? 'outline-light' : 'outline-dark'}
             href={link.href}
             target='_blank'
             rel='noreferrer'
