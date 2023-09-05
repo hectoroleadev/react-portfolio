@@ -7,12 +7,17 @@ export const useChangeTheme = () => {
   const { isDarkTheme, setDarkTheme } = useContext(AppContext);
 
   const changeTheme = () => {
-    DARK_CLASS.remove('dark');
     setDarkTheme(!isDarkTheme);
   };
 
   useEffect(() => {
-    if (isDarkTheme) DARK_CLASS.add('dark');
+    if (isDarkTheme) {
+      DARK_CLASS.add('dark');
+    } else {
+      DARK_CLASS.remove('dark');
+    }
+
+    localStorage.setItem('isDarkTheme', isDarkTheme);
   }, [isDarkTheme]);
 
   return {

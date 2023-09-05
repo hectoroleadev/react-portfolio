@@ -20,9 +20,11 @@ const appReducer = (state, action) => {
   }
 };
 
+const isDarkTheme = localStorage.getItem('isDarkTheme') === 'true';
+
 const initialState = {
   landscape: false,
-  isDarkTheme: true,
+  isDarkTheme: isDarkTheme,
 };
 
 export const AppContext = createContext(initialState);
