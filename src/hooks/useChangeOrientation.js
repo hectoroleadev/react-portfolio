@@ -1,10 +1,10 @@
-import { useEffect, useState, useContext } from 'react';
-import { AppContext } from '../contexts/AppState';
+import { useEffect, useContext } from 'react';
+import { ProfileContext } from '../contexts/ProfileContext';
 
 const MIN_LANDSCAPE = 600;
 
 export const useChangeOrientation = () => {
-  const { landscape, setLandscape } = useContext(AppContext);
+  const { isLandscape, setLandscape } = useContext(ProfileContext);
 
   const changeOrientationColumns = () => {
     const isLandscape = window.matchMedia('(orientation: landscape)');
@@ -19,6 +19,6 @@ export const useChangeOrientation = () => {
   }, []);
 
   return {
-    landscape,
+    isLandscape,
   };
 };

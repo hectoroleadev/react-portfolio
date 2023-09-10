@@ -1,18 +1,18 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { HeaderProfile, MainProfile, FooterProfile } from './components';
 import Container from 'react-bootstrap/Container';
-import { AppContext, AppProvider } from './contexts/AppState';
 import './App.css';
 import './App.dark.css';
+import { ProfileContext, ProfileProvider } from './contexts';
 
 const PortFolioApp = () => {
   return (
-    <AppProvider>
-      <AppContext.Consumer>
-        {({ landscape }) => (
+    <ProfileProvider>
+      <ProfileContext.Consumer>
+        {({ isLandscape }) => (
           <Container
             className={`${
-              landscape ? 'cover-container-landscape' : 'cover-container'
+              isLandscape ? 'cover-container-landscape' : 'cover-container'
             } d-flex flex-column text-center p-3 min-vh-100`}
           >
             <HeaderProfile />
@@ -20,8 +20,8 @@ const PortFolioApp = () => {
             <FooterProfile />
           </Container>
         )}
-      </AppContext.Consumer>
-    </AppProvider>
+      </ProfileContext.Consumer>
+    </ProfileProvider>
   );
 };
 

@@ -9,22 +9,22 @@ import Col from 'react-bootstrap/Col';
 import { useChangeOrientation } from '../hooks/useChangeOrientation';
 
 export const MainProfile = () => {
-  const { landscape } = useChangeOrientation();
+  const { isLandscape } = useChangeOrientation();
 
   return (
     <main>
       <article>
         <Row
           className='align-items-center mx-auto'
-          style={{ height: landscape ? '70vh' : '90vh' }}
+          style={{ height: isLandscape ? '70vh' : '90vh' }}
         >
           <Col>
             <ContactSection />
             <LinksSection />
-            {!landscape && <AboutSection />}
-            {!landscape && <DownloadSection />}
+            {!isLandscape && <AboutSection />}
+            {!isLandscape && <DownloadSection />}
           </Col>
-          {landscape && (
+          {isLandscape && (
             <Col>
               <AboutSection />
               <DownloadSection />
