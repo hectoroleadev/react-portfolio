@@ -1,11 +1,11 @@
 import { useContext } from 'react';
-import { AppContext } from '../../contexts/AppState';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import Button from 'react-bootstrap/Button';
+import { ProfileContext } from '../../contexts';
 
 export const DownloadSection = () => {
-  const { isDarkTheme: darkTheme } = useContext(AppContext);
+  const { isDarkTheme: darkTheme } = useContext(ProfileContext);
 
   return (
     <section>

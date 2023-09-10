@@ -1,8 +1,8 @@
 import { useContext } from 'react';
-import { AppContext } from '../contexts/AppState';
+import { ProfileContext } from '../contexts';
 
 export const FooterProfile = () => {
-  const { isDarkTheme } = useContext(AppContext);
+  const { isDarkTheme } = useContext(ProfileContext);
 
   return (
     <footer className={`mt-auto text-${isDarkTheme ? 'white' : 'black'}`}>
