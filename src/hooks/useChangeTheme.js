@@ -1,10 +1,10 @@
 import { useEffect, useContext } from 'react';
-import { ProfileContext } from '../contexts/ProfileContext';
+import { PortfolioContext } from '../contexts';
 
 const DARK_CLASS = document.body.classList;
 
 export const useChangeTheme = () => {
-  const { isDarkTheme, setDarkTheme } = useContext(ProfileContext);
+  const { isDarkTheme, setDarkTheme } = useContext(PortfolioContext);
 
   const changeTheme = () => {
     setDarkTheme(!isDarkTheme);

@@ -1,11 +1,11 @@
 import { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Button from 'react-bootstrap/Button';
-import { getLinksSection } from '../../helpers/getLinksSection';
-import { ProfileContext } from '../../contexts';
+import { getLinksSection } from '../../helpers';
+import { PortfolioContext } from '../../contexts';
 
 export const LinksSection = () => {
-  const { isDarkTheme } = useContext(ProfileContext);
+  const { isDarkTheme } = useContext(PortfolioContext);
   const links = getLinksSection();
 
   return (

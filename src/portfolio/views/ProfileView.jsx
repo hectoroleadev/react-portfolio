@@ -3,12 +3,12 @@ import {
   DownloadSection,
   LinksSection,
   ContactSection,
-} from './mainSection';
+} from '../components';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { useChangeOrientation } from '../hooks/useChangeOrientation';
+import { useChangeOrientation } from '../../hooks';
 
-export const MainProfile = () => {
+export const ProfileView = () => {
   const { isLandscape } = useChangeOrientation();
 
   return (

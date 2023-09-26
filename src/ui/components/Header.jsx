@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import Button from 'react-bootstrap/Button';
-import { useChangeTheme } from '../hooks/useChangeTheme';
+import { useChangeTheme } from '../../hooks';
 
-export const HeaderProfile = () => {
+export const Header = () => {
   const { isDarkTheme, changeTheme } = useChangeTheme();
 
   return (

@@ -1,22 +1,18 @@
 import { useEffect, useContext } from 'react';
-import { ProfileContext } from '../contexts/ProfileContext';
-
-const MIN_LANDSCAPE = 600;
+import { PortfolioContext } from '../contexts';
+import { isLandscapeChanged } from '../helpers';
 
 export const useChangeOrientation = () => {
-  const { isLandscape, setLandscape } = useContext(ProfileContext);
+  const { isLandscape, setLandscape } = useContext(PortfolioContext);
 
   const changeOrientationColumns = () => {
-    const isLandscape = window.matchMedia('(orientation: landscape)');
-    const screenHeight = window.screen.height;
-
-    setLandscape(isLandscape.matches && screenHeight < MIN_LANDSCAPE);
+    setLandscape(isLandscapeChanged());
   };
 
   useEffect(() => {
     window.onload = changeOrientationColumns;
     window.addEventListener('resize', changeOrientationColumns);
-  }, []);
+  }, [isLandscape]);
 
   return {
     isLandscape,
