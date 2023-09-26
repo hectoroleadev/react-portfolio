@@ -1,5 +1,6 @@
 import { useReducer } from 'react';
-import { ProfileContext } from './ProfileContext';
+import { PortfolioContext, portfolioReducer } from './';
+import { types } from '../types';
 
 const localStorageTheme = localStorage.getItem('isDarkTheme');
 
@@ -10,34 +11,14 @@ const initialState = {
   isDarkTheme,
 };
 
-const profileReducer = (state, action) => {
-  switch (action.type) {
-    case 'SET_LANDSCAPE': {
-      return {
-        ...state,
-        isLandscape: action.payload,
-      };
-    }0
-    case 'SET_DARK_THEME': {
-      return {
-        ...state,
-        isDarkTheme: action.payload,
-      };
-    }
-    default: {
-      return state;
-    }
-  }
-};
-
-export const ProfileProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(profileReducer, initialState);
+export const PortfolioProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(portfolioReducer, initialState);
 
   const { isDarkTheme, isLandscape } = state;
 
   const setDarkTheme = (bool) => {
     const action = {
-      type: 'SET_DARK_THEME',
+      type: types.theme,
       payload: bool,
     };
 
@@ -46,7 +27,7 @@ export const ProfileProvider = ({ children }) => {
 
   const setLandscape = (bool) => {
     const action = {
-      type: 'SET_LANDSCAPE',
+      type: types.landscape,
       payload: bool,
     };
 
@@ -54,7 +35,7 @@ export const ProfileProvider = ({ children }) => {
   };
 
   return (
-    <ProfileContext.Provider
+    <PortfolioContext.Provider
       value={{
         isLandscape,
         isDarkTheme,
@@ -63,6 +44,6 @@ export const ProfileProvider = ({ children }) => {
       }}
     >
       {children}
-    </ProfileContext.Provider>
+    </PortfolioContext.Provider>
   );
 };
