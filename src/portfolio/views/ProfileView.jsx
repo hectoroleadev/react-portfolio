@@ -18,14 +18,21 @@ export const ProfileView = () => {
           className='align-items-center mx-auto'
           style={{ height: isLandscape ? '70vh' : '90vh' }}
         >
-          <Col>
-            <ContactSection />
-            <LinksSection />
-            {!isLandscape && <AboutSection />}
-            {!isLandscape && <DownloadSection />}
-          </Col>
-          {isLandscape && (
+          {isLandscape ? (
+            <>
+              <Col>
+                <ContactSection />
+                <LinksSection />
+              </Col>
+              <Col>
+                <AboutSection />
+                <DownloadSection />
+              </Col>
+            </>
+          ) : (
             <Col>
+              <ContactSection />
+              <LinksSection />
               <AboutSection />
               <DownloadSection />
             </Col>

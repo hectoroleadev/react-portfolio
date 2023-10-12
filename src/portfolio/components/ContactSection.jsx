@@ -23,6 +23,6 @@ ContactSection.propTypes = {
 };
 
 ContactSection.defaultProps = {
-  fullName: 'Hector Olea',
-  role: 'Full Stack Developer',
+  fullName: 'hector olea',
+  role: 'full stack developer',
 };
