@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import Button from 'react-bootstrap/Button';
-import { useChangeTheme } from '../../hooks';
+import { usePortfolio } from '../../hooks';
 
 export const Header = () => {
-  const { isDarkTheme, changeTheme } = useChangeTheme();
+  const { isDarkTheme, changeTheme } = usePortfolio();
 
   return (
     <header className='text-end fixed-top p-3'>
