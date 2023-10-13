@@ -1,6 +1,10 @@
 import { Footer, Header } from '../../ui';
 
-export const PortfolioLayout = ({ children }) => {
+interface props {
+  children: JSX.Element | JSX.Element[];
+}
+
+export const PortfolioLayout = ({ children }: props) => {
   return (
     <>
       <Header />

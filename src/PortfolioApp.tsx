@@ -2,11 +2,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import './App.css';
 import './App.dark.css';
-import { PortfolioContext, PortfolioProvider } from './contexts';
-import { PortfolioPage } from './portfolio';
+import { PortfolioPage } from './portfolio/pages';
+import { PortfolioContext, PortfolioProvider } from './context';
+import { PortfolioState } from './interfaces';
 
 const PortFolioApp = () => {
-  const generateClassName = (isLandscape) =>
+  const generateClassName = ({ isLandscape }: PortfolioState) =>
     `${
       isLandscape ? 'cover-container-landscape' : 'cover-container'
     } d-flex flex-column text-center p-3 min-vh-100`;
@@ -14,8 +15,8 @@ const PortFolioApp = () => {
   return (
     <PortfolioProvider>
       <PortfolioContext.Consumer>
-        {({ isLandscape }) => (
-          <Container className={generateClassName(isLandscape)}>
+        {({ portfolioState }) => (
+          <Container className={generateClassName(portfolioState)}>
             <PortfolioPage />
           </Container>
         )}

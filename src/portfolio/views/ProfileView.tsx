@@ -1,15 +1,20 @@
-import {
-  AboutSection,
-  DownloadSection,
-  LinksSection,
-  ContactSection,
-} from '../components';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { useChangeOrientation } from '../../hooks';
+import { usePortfolio } from '../../hooks';
+import {
+  AboutSection,
+  ContactSection,
+  DownloadSection,
+  LinksSection,
+} from '../components';
+import { Contact } from '../../interfaces';
 
 export const ProfileView = () => {
-  const { isLandscape } = useChangeOrientation();
+  const { isLandscape } = usePortfolio();
+  const contact: Contact = {
+    fullName: 'hector olea',
+    role: 'full stack developer',
+  };
 
   return (
     <main>
@@ -21,7 +26,7 @@ export const ProfileView = () => {
           {isLandscape ? (
             <>
               <Col>
-                <ContactSection />
+                <ContactSection contact={contact} />
                 <LinksSection />
               </Col>
               <Col>
@@ -31,7 +36,7 @@ export const ProfileView = () => {
             </>
           ) : (
             <Col>
-              <ContactSection />
+              <ContactSection contact={contact} />
               <LinksSection />
               <AboutSection />
               <DownloadSection />
