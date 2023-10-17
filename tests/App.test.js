@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import App from '../App';
+import { PortFolioApp } from '../src/PortfolioApp';
 
 test('renders hectorolea.dev footer', () => {
-  render(<App />);
+  render(<PortFolioApp />);
   const linkElement = screen.getByText(/hectorolea.dev/i);
   expect(linkElement).toBeInTheDocument();
 });
