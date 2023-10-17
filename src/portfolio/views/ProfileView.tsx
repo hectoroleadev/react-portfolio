@@ -7,7 +7,7 @@ import {
   DownloadSection,
   LinksSection,
 } from '../components';
-import { Contact } from '../../interfaces';
+import { Contact } from '../reducer/interfaces';
 
 export const ProfileView = () => {
   const { isLandscape } = usePortfolio();

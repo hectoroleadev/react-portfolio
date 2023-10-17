@@ -1,6 +1,11 @@
 import { useReducer } from 'react';
-import { PortfolioState } from '../interfaces';
-import { PortfolioContext, portfolioReducer } from './';
+import { PortfolioContext } from './';
+import { PortfolioState } from '../portfolio/reducer/interfaces';
+import { portfolioReducer } from '../portfolio/reducer/state/portfolioReducer';
+import {
+  doSetDarkTheme,
+  doSetLandscapeMode,
+} from '../portfolio/reducer/actions';
 
 const localStorageTheme = localStorage.getItem('isDarkTheme');
 
@@ -19,11 +24,11 @@ export const PortfolioProvider = ({ children }: props) => {
   const [portfolioState, dispatch] = useReducer(portfolioReducer, initialState);
 
   const setDarkTheme = (isDarkTheme: boolean) => {
-    dispatch({ type: 'setDarkTheme', payload: { isDarkTheme } });
+    dispatch(doSetDarkTheme(isDarkTheme));
   };
 
   const setLandscapeMode = (isLandscapeMode: boolean) => {
-    dispatch({ type: 'setLandscapeMode', payload: { isLandscapeMode } });
+    dispatch(doSetLandscapeMode(isLandscapeMode));
   };
 
   return (

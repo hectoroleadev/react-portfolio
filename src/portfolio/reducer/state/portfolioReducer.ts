@@ -1,14 +1,5 @@
+import { PortfolioAction } from '../actions';
 import { PortfolioState } from '../interfaces';
-
-type PortfolioAction =
-  | {
-      type: 'setLandscapeMode';
-      payload: { isLandscapeMode: boolean };
-    }
-  | {
-      type: 'setDarkTheme';
-      payload: { isDarkTheme: boolean };
-    };
 
 export const portfolioReducer = (
   state: PortfolioState,
@@ -18,13 +9,13 @@ export const portfolioReducer = (
     case 'setLandscapeMode':
       return {
         ...state,
-        isLandscape: action.payload.isLandscapeMode,
+        isLandscape: action.payload.value,
       };
 
     case 'setDarkTheme': {
       return {
         ...state,
-        isDarkTheme: action.payload.isDarkTheme,
+        isDarkTheme: action.payload.value,
       };
     }
     default:

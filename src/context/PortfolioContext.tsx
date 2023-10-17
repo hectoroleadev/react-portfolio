@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import { PortfolioState } from '../interfaces';
+import { PortfolioState } from '../portfolio/reducer/interfaces';
 
 export type PortfolioContextProps = {
   portfolioState: PortfolioState;
