@@ -1,5 +1,5 @@
 import Image from 'react-bootstrap/Image';
-import { Contact } from '../../interfaces';
+import { Contact } from '../reducer/interfaces';
 
 interface Props {
   contact: Contact;
