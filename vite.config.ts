@@ -9,7 +9,14 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,jpg,svg,pdf}'],
+        globPatterns: [
+          '*.{js,css,html,ico,png}',
+          'pdfs/*.pdf',
+          'certificate/*.pdf',
+          'images/*.jpg',
+          'svg/*.svg',
+          'assets/*.{js,css}',
+        ],
         maximumFileSizeToCacheInBytes: 2500000,
       },
     }),
