@@ -1,6 +1,7 @@
 {
   "short_name": "Hector Olea Web Site",
-  "name": "Hector Olea Web Site Created by React JS",
+  "name": "hectorolea.dev",
+  "descriptions": "Hector Olea Web Site Created by React JS + Typescript",
   "icons": [
     {
       "src": "logo192.png",
