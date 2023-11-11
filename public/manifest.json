@@ -1,7 +1,7 @@
 {
-  "short_name": "hectorolea.dev",
-  "name": "hectorolea.dev",
-  "descriptions": "Hector Olea Web Site Created by React JS + Typescript",
+  "short_name": "hectorolea profile",
+  "name": "hectorolea profile",
+  "descriptions": "Hector Olea web site powered by React JS + Typescript",
   "icons": [
     {
       "src": "logo192.png",
