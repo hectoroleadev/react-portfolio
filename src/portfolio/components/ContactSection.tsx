@@ -12,7 +12,7 @@ export const ContactSection = ({ contact }: Props) => {
     <section>
       <Image
         className='rounded-5 mb-4'
-        src='images/hector-olea.jpg'
+        src='https://storage.hectorolea.dev/hector-olea.jpg'
         width='150'
         height='150'
         alt={fullName}

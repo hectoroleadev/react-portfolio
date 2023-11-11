@@ -12,7 +12,7 @@ export const DownloadSection = () => {
     <section>
       <Button
         variant={isDarkTheme ? 'outline-light' : 'outline-dark'}
-        href='pdfs/hector-olea-resume.pdf'
+        href='https://storage.hectorolea.dev/hector-olea-resume.pdf'
         target='_blank'
         rel='noreferrer'
       >
