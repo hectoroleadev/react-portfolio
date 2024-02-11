@@ -3,6 +3,9 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import Button from 'react-bootstrap/Button';
 import { useContext } from 'react';
 import { PortfolioContext } from '../../context';
+import { getEnvVariables } from '../../helpers/getEnvVariables';
+
+const { STORAGE_URL } = getEnvVariables();
 
 export const DownloadSection = () => {
   const { portfolioState } = useContext(PortfolioContext);
@@ -12,7 +15,7 @@ export const DownloadSection = () => {
     <section>
       <Button
         variant={isDarkTheme ? 'outline-light' : 'outline-dark'}
-        href='https://storage.hectorolea.dev/hector-olea-resume.pdf'
+        href={`${STORAGE_URL}/hector-olea-resume.pdf`}
         target='_blank'
         rel='noreferrer'
       >
