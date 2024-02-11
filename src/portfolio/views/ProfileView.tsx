@@ -17,7 +17,7 @@ export const ProfileView = () => {
   };
 
   return (
-    <main>
+    <main className='animate__animated animate__fadeIn animate__slow'>
       <article>
         <Row
           className='align-items-center mx-auto'
