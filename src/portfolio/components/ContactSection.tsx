@@ -1,16 +1,21 @@
 import Image from 'react-bootstrap/Image';
 import { Contact } from '../reducer/interfaces';
 import { getEnvVariables } from '../../helpers/getEnvVariables';
+import { FC } from 'react';
 
 const { STORAGE_URL } = getEnvVariables();
 
 interface Props {
-  contact: Contact;
+  contact?: Contact;
 }
 
-export const ContactSection = ({ contact }: Props) => {
-  const { fullName, role } = contact;
+const contactDefault: Contact = {
+  fullName: 'hector olea',
+  role: 'full stack developer',
+};
 
+export const ContactSection: FC<Props> = ({ contact = contactDefault }) => {
+  const { fullName, role } = contact;
   return (
     <section>
       <Image

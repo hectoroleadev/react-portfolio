@@ -1,5 +1,5 @@
-import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 import { usePortfolio } from '../../hooks';
 import {
   AboutSection,
@@ -7,14 +7,9 @@ import {
   DownloadSection,
   LinksSection,
 } from '../components';
-import { Contact } from '../reducer/interfaces';
 
 export const ProfileView = () => {
   const { isLandscape } = usePortfolio();
-  const contact: Contact = {
-    fullName: 'hector olea',
-    role: 'full stack developer',
-  };
 
   return (
     <main className='animate__animated animate__fadeIn animate__slow'>
@@ -26,7 +21,7 @@ export const ProfileView = () => {
           {isLandscape ? (
             <>
               <Col>
-                <ContactSection contact={contact} />
+                <ContactSection />
                 <LinksSection />
               </Col>
               <Col>
@@ -36,7 +31,7 @@ export const ProfileView = () => {
             </>
           ) : (
             <Col>
-              <ContactSection contact={contact} />
+              <ContactSection />
               <LinksSection />
               <AboutSection />
               <DownloadSection />

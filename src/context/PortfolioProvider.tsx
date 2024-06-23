@@ -7,9 +7,7 @@ import {
   doSetLandscapeMode,
 } from '../portfolio/reducer/actions';
 
-const localStorageTheme = localStorage.getItem('isDarkTheme');
-
-const isDarkTheme = localStorageTheme === 'true' || localStorageTheme === null;
+const isDarkTheme = localStorage.getItem('isDarkTheme') === 'true';
 
 const initialState: PortfolioState = {
   isLandscape: false,
